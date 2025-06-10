@@ -78,7 +78,7 @@ export default function ProductCarousel() {
           </div>
           <CarouselContent className="-ml-2 md:-ml-4">
             {products.map((product) => (
-              <CarouselItem key={product.id} className="pl-2 md:pl-4 md:pr-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+              <CarouselItem key={product.id} className="pl-2 md:pl-4 md:pr-6 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-[calc(100%/3.5)]">
                 <Card className="h-full flex flex-col">
                   <CardContent className="p-0 flex flex-col h-full">
                     <div className="relative">
@@ -96,7 +96,7 @@ export default function ProductCarousel() {
                       )}
                     </div>
 
-                    <div className="p-4 flex flex-col flex-grow">
+                    <div className="py-4 flex flex-col flex-grow">
                       <div className="flex-grow">
                         <h3 className="font-bold text-lg text-black mb-1">{product.name}</h3>
                         <div className="flex flex-wrap gap-1 mb-2">
@@ -106,13 +106,13 @@ export default function ProductCarousel() {
                               <Badge
                                 key={index}
                                 variant="secondary"
-                                className="text-xs bg-gray-100 text-black hover:bg-gray-200"
+                                className="text-xs bg-gray-200 text-black hover:bg-gray-300"
                               >
                                 {tag}
                               </Badge>
                             ))}
                         </div>
-                        <p className="text-sm text-gray-600 line-clamp-2 mb-4">{product.description}</p>
+                        <p className="text-sm text-gray-700 line-clamp-2 mb-4">{product.description}</p>
                       </div>
 
                       <div className="mt-auto space-y-3">
